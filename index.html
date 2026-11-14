@@ -168,9 +168,9 @@
     <div class="absolute bottom-0 left-1/4 w-[28rem] h-[28rem] rounded-full bg-celestial-200/45 blur-3xl"></div>
   </div>
 
-  <!-- ===================================================================== -->
+
   <!-- 1. OPENING CELESTIAL SEAL OVERLAY ("Unveil Your Birthday Scroll")      -->
-  <!-- ===================================================================== -->
+
   <div id="openingSeal" class="fixed inset-0 z-50 flex items-center justify-center p-4 transition-all duration-1000"
        style="background: radial-gradient(circle at center, #fff7fa 0%, #ffe3ec 55%, #ffd5e2 100%);">
     <div class="max-w-md w-full silk-card gold-border rounded-3xl p-8 sm:p-10 text-center relative overflow-hidden">
@@ -224,9 +224,9 @@
     </div>
   </div>
 
-  <!-- ===================================================================== -->
-  <!-- TOP FLOATING CONTROLS (Music Box Toggle, Petal Density, Edit Letter)  -->
-  <!-- ===================================================================== -->
+
+  <!-- TOP FLOATING CONTROLS (Music Box Toggle, Petal Density)               -->
+
   <header class="sticky top-3 z-40 px-4 max-w-4xl mx-auto flex flex-wrap items-center justify-between gap-2">
     <div class="silk-card rounded-full px-4 py-2 flex items-center gap-2 text-xs sm:text-sm font-semibold text-sakura-500">
       <svg class="w-4 h-4 text-sakura-400" viewBox="0 0 24 24" fill="currentColor">
@@ -253,21 +253,12 @@
         </svg>
         <span id="musicLabel">Music: Off</span>
       </button>
-
-      <!-- Subtle Customize Button (Before Publishing to GitHub) -->
-      <button id="openEditorBtn" title="Edit Personal Letter"
-              class="silk-card rounded-full p-2.5 text-[#8a6070] hover:text-sakura-500 hover:bg-white/90 transition cursor-pointer"
-              aria-label="Edit Message">
-        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
-        </svg>
-      </button>
     </div>
   </header>
 
-  <!-- ===================================================================== -->
+
   <!-- MAIN SCROLL CONTENT                                                   -->
-  <!-- ===================================================================== -->
+
   <main class="relative z-20 max-w-3xl mx-auto px-4 pt-6 pb-20 space-y-10">
 
     <!-- 2. HERO CELEBRATION SECTION (No Countdown — Direct Birthday Greeting) -->
@@ -283,7 +274,7 @@
       </h1>
 
       <p class="font-serif italic text-lg sm:text-xl text-[#784d5e] max-w-lg mx-auto mb-7">
-        May your days bloom as gracefully as peach blossoms by tranquil waters, filled with warmth and quiet joy.
+        May your days bloom as gracefully as blossoms by tranquil waters, filled with warmth and quiet joy.
       </p>
 
       <!-- Four Traditional Chinese Blessings with Accurate Pinyin & English Translations -->
@@ -544,13 +535,13 @@
 
       <div id="letterBodyDisplay" class="font-serif text-lg sm:text-xl leading-relaxed text-[#5c3a47] space-y-4 whitespace-pre-line">Happy Birthday, Cheryl.
 
-On your special day, I wanted to make a quiet corner of pink blossoms and tranquil waters just for you.
+On your special day, I wanted to make a little wishes for you cece.
 
 May the year ahead bring you steady peace, good health, and every happiness your heart wishes for. Thank you for being such a wonderful friend.</div>
 
       <div class="mt-8 pt-4 border-t border-sakura-200/60 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
         <p id="letterSignoffDisplay" class="font-serif italic text-lg text-sakura-500 font-semibold">
-          Warmest wishes, Your Friend
+          Warmest wishes, Amloafer
         </p>
         <span class="font-chinese text-base text-[#9b7282]">生日快乐</span>
       </div>
@@ -558,65 +549,12 @@ May the year ahead bring you steady peace, good health, and every happiness your
 
   </main>
 
-  <!-- ===================================================================== -->
-  <!-- CUSTOMIZE MESSAGE MODAL (For editing before pushing to GitHub Pages)  -->
-  <!-- ===================================================================== -->
-  <div id="editorModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/35 backdrop-blur-sm">
-    <div class="silk-card bg-white/95 rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-sakura-200">
-      <div class="flex items-center justify-between mb-4">
-        <h3 class="font-display text-xl font-bold text-sakura-500">Edit Birthday Letter</h3>
-        <button id="closeEditorBtn" class="text-[#8a6070] hover:text-sakura-500 text-lg font-bold cursor-pointer" aria-label="Close">✕</button>
-      </div>
-      <p class="text-xs text-[#7d5263] mb-4">
-        Personalize your message below, then copy the complete HTML file for GitHub Pages.
-      </p>
 
-      <div class="space-y-3">
-        <div>
-          <label class="block text-xs font-bold uppercase tracking-wider text-[#6e4756] mb-1">Greeting</label>
-          <input id="editHeadingInput" type="text"
-                 class="w-full rounded-xl border border-sakura-200 px-3.5 py-2 text-sm focus:outline-none focus:border-sakura-400 bg-sakura-50/40"
-                 value="Dearest Cheryl," />
-        </div>
-
-        <div>
-          <label class="block text-xs font-bold uppercase tracking-wider text-[#6e4756] mb-1">Message</label>
-          <textarea id="editBodyInput" rows="6"
-                    class="w-full rounded-xl border border-sakura-200 px-3.5 py-2 text-sm focus:outline-none focus:border-sakura-400 bg-sakura-50/40"></textarea>
-        </div>
-
-        <div>
-          <label class="block text-xs font-bold uppercase tracking-wider text-[#6e4756] mb-1">Signature</label>
-          <input id="editSignoffInput" type="text"
-                 class="w-full rounded-xl border border-sakura-200 px-3.5 py-2 text-sm focus:outline-none focus:border-sakura-400 bg-sakura-50/40"
-                 value="Warmest wishes, Your Friend" />
-        </div>
-      </div>
-
-      <div class="mt-6 flex flex-wrap items-center justify-end gap-2">
-        <button id="copyUpdatedHtmlBtn"
-                class="px-4 py-2 rounded-full bg-amber-100 text-amber-800 border border-amber-300 text-xs font-semibold hover:bg-amber-200 transition cursor-pointer">
-          Copy Full HTML for GitHub
-        </button>
-        <button id="saveLetterBtn"
-                class="px-5 py-2 rounded-full bg-gradient-to-r from-sakura-400 to-peach-400 text-white text-xs sm:text-sm font-semibold shadow hover:opacity-95 transition cursor-pointer">
-          Apply Changes
-        </button>
-      </div>
-      <p id="copyFeedback" class="text-xs text-emerald-600 font-semibold mt-2 text-right hidden">
-        Copied complete index.html to clipboard.
-      </p>
-    </div>
-  </div>
-
-  <!-- ===================================================================== -->
   <!-- JAVASCRIPT: Web Audio Music Box, Particles & Interactions             -->
-  <!-- ===================================================================== -->
+
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      /* -------------------------------------------------------------------
-         1. GENERATIVE WEB AUDIO API MUSIC BOX ("Happy Birthday" Celesta)
-         ------------------------------------------------------------------- */
+      /* 1. GENERATIVE WEB AUDIO API MUSIC BOX ("Happy Birthday")*/
       let audioCtx = null;
       let isMusicPlaying = false;
       let melodyTimer = null;
@@ -724,9 +662,7 @@ May the year ahead bring you steady peace, good health, and every happiness your
 
       document.getElementById('musicToggleBtn').addEventListener('click', () => toggleMusic());
 
-      /* -------------------------------------------------------------------
-         2. OPENING SEAL UNVEIL INTERACTION
-         ------------------------------------------------------------------- */
+      /*  2. OPENING SEAL UNVEIL INTERACTION */
       const openingSeal = document.getElementById('openingSeal');
       document.getElementById('unveilBtn').addEventListener('click', () => {
         playMusicBoxNote(523.25, 0.5);
@@ -743,9 +679,7 @@ May the year ahead bring you steady peace, good health, and every happiness your
         }, 950);
       });
 
-      /* -------------------------------------------------------------------
-         3. INTERACTIVE WATERFALL WISHING POOL (Bilingual Chinese Blessings)
-         ------------------------------------------------------------------- */
+      /*  3. INTERACTIVE WATERFALL WISHING POOL (Bilingual Chinese Blessings)*/
       const BLESSINGS = [
         { zh: "岁岁平安", pinyin: "Suìsuì Píng'ān", en: "Peace and safety year after year." },
         { zh: "心想事成", pinyin: "Xīnxiǎng Shìchéng", en: "May every wish in your heart come true." },
@@ -829,9 +763,7 @@ May the year ahead bring you steady peace, good health, and every happiness your
         spawnPondBlossom(randomX, randomY);
       });
 
-      /* -------------------------------------------------------------------
-         4. INTERACTIVE BIRTHDAY CAKE & CANDLE BLOWING
-         ------------------------------------------------------------------- */
+      /* 4. INTERACTIVE BIRTHDAY CAKE & CANDLE BLOWING */
       let candlesLit = true;
       const flames = document.querySelectorAll('.candle-flame');
       const smokeGroup = document.getElementById('smokeGroup');
@@ -878,73 +810,7 @@ May the year ahead bring you steady peace, good health, and every happiness your
       document.getElementById('candlesGroup').addEventListener('click', blowOutCandles);
       relightBtn.addEventListener('click', relightCandles);
 
-      /* -------------------------------------------------------------------
-         5. CUSTOMIZE KEEPSAKE LETTER MODAL (Pre-GitHub Publishing Helper)
-         ------------------------------------------------------------------- */
-      const editorModal = document.getElementById('editorModal');
-      const headingDisplay = document.getElementById('letterHeadingDisplay');
-      const bodyDisplay = document.getElementById('letterBodyDisplay');
-      const signoffDisplay = document.getElementById('letterSignoffDisplay');
-
-      const headingInput = document.getElementById('editHeadingInput');
-      const bodyInput = document.getElementById('editBodyInput');
-      const signoffInput = document.getElementById('editSignoffInput');
-
-      document.getElementById('openEditorBtn').addEventListener('click', () => {
-        headingInput.value = headingDisplay.textContent.trim();
-        bodyInput.value = bodyDisplay.textContent.trim();
-        signoffInput.value = signoffDisplay.textContent.trim();
-        document.getElementById('copyFeedback').classList.add('hidden');
-        editorModal.classList.remove('hidden');
-        editorModal.classList.add('flex');
-      });
-
-      document.getElementById('closeEditorBtn').addEventListener('click', () => {
-        editorModal.classList.add('hidden');
-        editorModal.classList.remove('flex');
-      });
-
-      document.getElementById('saveLetterBtn').addEventListener('click', () => {
-        headingDisplay.textContent = headingInput.value;
-        bodyDisplay.textContent = bodyInput.value;
-        signoffDisplay.textContent = signoffInput.value;
-        editorModal.classList.add('hidden');
-        editorModal.classList.remove('flex');
-      });
-
-      document.getElementById('copyUpdatedHtmlBtn').addEventListener('click', () => {
-        // Apply edits first so the serialized DOM includes the user's customized message
-        headingDisplay.textContent = headingInput.value;
-        bodyDisplay.textContent = bodyInput.value;
-        signoffDisplay.textContent = signoffInput.value;
-
-        // Reset modal & seal visibility cleanly in exported HTML
-        editorModal.classList.add('hidden');
-        editorModal.classList.remove('flex');
-        openingSeal.style.display = 'flex';
-        openingSeal.style.opacity = '1';
-        openingSeal.style.transform = 'scale(1)';
-
-        const fullHtml = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
-
-        // Re-hide seal for current preview session
-        openingSeal.style.display = 'none';
-        editorModal.classList.remove('hidden');
-        editorModal.classList.add('flex');
-
-        const tempTextarea = document.createElement('textarea');
-        tempTextarea.value = fullHtml;
-        document.body.appendChild(tempTextarea);
-        tempTextarea.select();
-        document.execCommand('copy');
-        document.body.removeChild(tempTextarea);
-
-        document.getElementById('copyFeedback').classList.remove('hidden');
-      });
-
-      /* -------------------------------------------------------------------
-         6. CANVAS FLOATING SAKURA / PEACH BLOSSOM PETALS & GOLD SPARKLES
-         ------------------------------------------------------------------- */
+      /* 5. CANVAS FLOATING SAKURA / PEACH BLOSSOM PETALS & GOLD SPARKLES */
       const canvas = document.getElementById('petalCanvas');
       const ctx = canvas.getContext('2d');
       let particles = [];
